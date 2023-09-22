@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>ONLINE </title>
+</head>
+<style>
+.img1{
+margin-top:-160px;
+height:600px;
+width:600px;
+margin-left:170px;
+}
+.U UL{ margin-left:500px; position:absolute; margin-top:5px; line-height:100px}
+.U UL li{display:inline;padding-left:20px;padding-right:20px}
+.U UL li a{text-decoration:none; color:white;background-color:#1c1c1c; font-weight:bold; padding:20px;border-radius:10px}
+.btn{
+margin-top:-100px;
+margin-left:100px;
+height:40px;
+border-radius:5px;
+
+width:90px;
+color:white;
+background-color:#1c1c1c;
+}
+
+.sea{
+height:50px;
+width:80%; 
+margin-top:-10%;
+margin-left:10%;
+}
+
+
+
+
+</style>
+<body style="margin:0;" >
+
+<div CLASS="U" style="height:100px; width:100%; background-color:white;" >
+
+<img class="img1" src="cheeeema.gif"/>
+
+</div>
+<br>
+
+<!-- input tag -->
+	<input style="height:7%; width:90%; margin-top:200px; border: 7px solid #000000; margin-left:5%; " id="searchbar" onkeyup="search_animal()" type="text"
+		name="search" placeholder="SEARCH IMAGES" style="font-size:150px;"  >
+		
+		<!-- ordered list -->
+	<ol id='list'>
+	
+	    <li style=" color:white; margin-left:-50px;"  class="animals">wallpaper<img style="height:500px; width:900px; " src="346439.jpg"/> </li>
+		<br>
+		<li style="margin-left:-15px; color:white;" class="animals">gun<img style="height:500px; width:900px; " src="2.jpg"/></li>
+		<br>
+		<li style="margin-left:-53px; color:white;"   class="animals">wallpaper<img style="height:500px; width:900px; " src="3.jpg"/></li>
+		<br>
+		<li  style="margin-left:-55px; color:white;"   class="animals">wallpaper<img style="height:500px; width:900px; " src="10.jpg"/></li>
+		<br>
+		<li  style="margin-left:-45px; color:white;"   class="animals">free fire<img style="height:500px; width:900px; " src="5.jpg"/></li>
+		<br>
+		<li   style="margin-left:-108px; color:white;" class="animals">free fire wallpaper<img style="height:500px; width:900px; " src="6.jpg"/></li>
+		
+	
+
+	</ol>	
+
+
+
+
+
+
+
+
+   	
+	<!-- linking javascript -->
+	<script src="./animals.js"></script>
+    <br>
+	
+	<script>
+	// JavaScript code
+function search_animal() {
+	let input = document.getElementById('searchbar').value
+	input=input.toLowerCase();
+	let x = document.getElementsByClassName('animals');
+	
+	for (i = 0; i < x.length; i++) {
+		if (!x[i].innerHTML.toLowerCase().includes(input)) {
+			x[i].style.display="none";
+		}
+		else {
+			x[i].style.display="list-item";				
+		}
+	}
+}
+
+	</script>
+</body>
+</html>
